@@ -1,0 +1,8 @@
+Aula 01 - Comandos Git
+git init - inicia o repositório local
+git status - verifica mudanças no repositório local
+git add "nome do arquivo.txt"
+git commit -m "mensagem do commit"
+git log - histórico de alterações no repositório
+git config --global user.name "nome de usuário do git"
+git config --global user.email "seu email do git"
