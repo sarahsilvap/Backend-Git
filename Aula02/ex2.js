@@ -1,3 +1,7 @@
-var valor = 50.5;
-var num = 100;
-var a = true;
+const valor = 50.5;
+const num = 100;
+const a = true;
+
+console.log(valor, 'Tipo da variável:', `${typeof valor}`)
+console.log (num, `${typeof num}`);
+console.log (a, `${typeof a}`);
