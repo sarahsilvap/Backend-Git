@@ -1,9 +1,15 @@
-function areaCirculo(){
-    let r = 6;
+const readline = require('readline'); 
 
-    const area = Math.PI * r ** 2;
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-    console.log(area);
-}
+// pergunta o primeiro e seungo valor
+rl.question('Digite o valor do raio do círculo: ', (raio) => {
+    
+    const areaCirculo = Math.PI * raio ** 2;
 
-areaCirculo()
+    console.log(`A área do triângulo é: ${areaCirculo}`);
+    rl.close();
+});

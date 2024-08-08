@@ -1,10 +1,17 @@
-function resistencia() {
-    let v = 135
-    let i = 5
+const readline = require('readline'); 
 
-    const formula = v / i;
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-    console.log(`A resistência desse circuito elétrico é de ${formula} Ohmns` )
-}
+// pergunta o primeiro e segungo valor
+rl.question('Digite o valor da tensão do circuito: ', (tensao) => {
+    rl.question('Digite o valro da corrente do circuito: ', (corrente) => {
+        
+        const resistencia = tensao / corrente;
 
-resistencia();
+        console.log(`A resistência desse circuito em Ohms é: ${resistencia}`);
+        rl.close();
+    });
+});
