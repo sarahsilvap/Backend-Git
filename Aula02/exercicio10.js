@@ -14,4 +14,5 @@ rl.question('Digite o valor da tensão do circuito: ', (tensao) => {
         console.log(`A resistência desse circuito em Ohms é: ${resistencia}`);
         rl.close();
     });
+
 });
