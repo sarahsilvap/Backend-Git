@@ -1,35 +1,31 @@
-class animal {
-    constructor(nome, idade) {
-        this.nome;
-        this.idade;
+class Usuario{
+    constructor(){
+        this.nome=null;
+        this.idade=null;
     }
-
-    fazerSom() {
-        console.log(`${this.nome} faz um som.`);
+    exibeinfo(){
+        console.log(`Nome ${this.nome}, idade ${this.idade}`);
     }
 }
-
-//extends gerança, a classe cachorro herda da classe animal algumas caracteríticas como nome e idade
-class cachorro extends animal {
+class cliente extends Usuario {
     constructor() {
-        //chama o construtor da classe base
         super();
-        this.raca = null;
+               
+
+        this.cargo = null;
+    }
+    exibeinfocargo(){
+        console.log(`Nome ${this.nome}, idade ${this.idade}, cargo ${this.cargo}`);
     }
 
-    // Método sobrescrito
-    fazerSom() {
-        console.log(`${this.nome} late.`);
-    }
-    // Método adicional
-    exibirInfo() {
-        console.log(`Nome: ${this.nome}, Idade: ${this.idade}, Raça: ${this.raca}`);
-    }
 }
 
-const Jerry = new cachorro();
-Jerry.nome = 'Jerry';
-Jerry.idade = '7';
-Jerry.raca = 'Pinscher';
-Jerry.exibirInfo();
-Jerry.fazerSom;
+const Daniel = new cliente();
+Daniel.nome="Daniel";
+Daniel.idade = 29;
+Daniel.cargo= "Professor";
+const Daniel1 = new Usuario();
+Daniel1.nome = "Filipe";
+Daniel1.idade = 29;
+Daniel.exibeinfocargo()
+Daniel1.exibeinfo();
