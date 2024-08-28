@@ -45,29 +45,80 @@ class Automovel {
     }
 }
 
-class carro extends Automovel {
+class Carro extends Automovel {
     constructor() {
-        
+        super();
+        this.fabricante = null;
+        this.ano = null;
+    }
+
+    exibirDados(){
+        console.log(`O carro é do fabricante ${this.fabricante} e do ano ${this.ano}`)
     }
 }
 
-const Corsa = new Carro('Prata', 'Corsa Classic', 'Flex', 4, 'Chevrolet', '2004');
+class Moto extends Automovel {
+    constructor() {
+        super();
+        this.cilindrada = null;
+    }
+
+    exibirDados() {
+        console.log(`A moto tem uma cilindrada de ${this.cilindrada}cc`);
+    }
+}
+
+class Caminhao extends Automovel {
+    constructor() {
+        super(); 
+        this.capacidadeCarga = null;
+    }
+
+    exibirDados() {
+        console.log(`O caminhão tem uma capacidade de carga de ${this.capacidadeCarga} kg`);
+    }
+}
+
+let Corsa = new Carro();
+Corsa.cor = 'Prata';
+Corsa.modelo = 'Classic';
+Corsa.tipoCombustivel = 'Gasolina';
+Corsa.qtdRodas = 4;
+Corsa.fabricante = 'Chevrolet';
+Corsa.ano = 2004;
+
 Corsa.ligarMotor();
 Corsa.abrirVidro();
 Corsa.statusMotor();
 Corsa.statusVidro();
 Corsa.exibirInfo();
+Corsa.exibirDados();
 
-const moto = new Moto('Vermelha', 'CB 500', 'Gasolina', 2);
-moto.ligarMotor();
-moto.abrirVidro(); 
-moto.statusMotor();
-moto.statusVidro(); 
-moto.exibirInfo();
 
-const caminhao = new Caminhao('Azul', 'Scania R', 'Diesel', 6, '30 toneladas');
-caminhao.ligarMotor();
-caminhao.abrirVidro(); 
-caminhao.statusMotor();
-caminhao.statusVidro(); 
-caminhao.exibirInfo();
+let ninja = new Moto();
+ninja.cor = 'Verde';
+ninja.modelo = 'Ninja ZX-6R';
+ninja.tipoCombustivel = 'Gasolina';
+ninja.qtdRodas = 2;
+ninja.cilindrada = 636;
+
+ninja.ligarMotor();
+ninja.fecharVidro(); // Moto não tem vidro, método só para demonstração
+ninja.statusMotor();
+ninja.statusVidro(); 
+ninja.exibirInfo();
+ninja.exibirDados();
+
+let scania = new Caminhao();
+scania.cor = 'Azul';
+scania.modelo = 'R 500';
+scania.tipoCombustivel = 'Diesel';
+scania.qtdRodas = 8;
+scania.capacidadeCarga = 20000;
+
+scania.ligarMotor();
+scania.fecharVidro(); 
+scania.statusMotor();
+scania.statusVidro(); 
+scania.exibirInfo();
+scania.exibirDados();
