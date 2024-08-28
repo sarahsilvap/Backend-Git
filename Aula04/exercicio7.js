@@ -32,3 +32,6 @@ Romance.edicao = 2;
 
 Romance.exibirInfo();
 Romance.Emprestimo(4);
+
+
+
