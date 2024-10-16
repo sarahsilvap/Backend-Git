@@ -8,4 +8,4 @@ const bookSchema = new mongoose.Schema({
 
 //exportanto o modelo paa salvar os livros
 
-modulo.exports = mongoose.model('Book', bookSchema);
+module.exports = mongoose.model('Book', bookSchema);
